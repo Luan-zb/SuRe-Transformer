@@ -1,4 +1,4 @@
-# SuRe-Transformer:Sufficent and Representative Transformer
+# SuRe-Transformer: Sufficient and Representative Transformer
 ![Graphical abstract](graphical-abstract.png) 
 
 - - -
@@ -6,27 +6,17 @@
 * Training and internal validation: The WSIs used in training and internal validation are from TCGA (https://portal.gdc.cancer.gov/), open access to all. 
 * External validation: we have collected a total of 192 breast cancer patients' data (WSI + HRD status) from the Beijing ChosenMed Clinical Laboratory Co. Ltd. Based on this dataset, we conduct external validation (train on TCGA, test on ChosenMed).
 - - -
-### cancer_area_segmentation: Identify cancer area for each WSI
 
-* `camelyon16xml2json.py`: Convert contour annotation from xml format to json format.
-* `tissue_mask_svs.py`: Get the tissue area of WSI.
-* `tumor_mask.py`: Get the cancer area mask of WSI.
-* `non_tumor_mask.py`: Get the normal area mask of WSI.
-* `genPatch_multi.py`: Generate patch dataset according to the tissue area file and annotation file.That is, the dataset for training the cancerous area segmentation model.
-* `train_fuzhong_c2.py`：Train cancerous area segmentation model on cancer and normal patch dataset.
-* `probs_map_svs_window_slide.py`：Predicting the cancerous area heatmap of WSI using cancerous area segmentation model.
+### get_DINO_features: Use DINO for patch embedding
 
-### get_byol_features: Use BYOL for patch embedding
+* `get_feature.py`：Use the trained DINO for patch embedding.
 
-* `train.py`：Training the BYOL model on our pathological iamge (patch) dataset.
-* `probs_map_svs_window_slide_feature.py`：Use the trained BYOL for patch embedding.
+### patch_clustering: Clustering patches in WSI 
 
-### cancer_patch_clustering: Clustering patches in cancer area
+* `featureClustering_dino_8K.py`：Clustering with the features extracted from DINO.
+* `genFeature_multi_8K.py`：According to the WSI patch clustering results, randomly select patches to build SuRe-Transformer training set.
 
-* `featureClustering.py`：Clustering with the features extracted from BYOL.
-* `randomSelect.py`：According to the cancerous patch clustering results, randomly select patches to build HDMIL training set.
-
-### hierarchical_dmil：HDMIL training
+### SuRe-Transformer：HDMIL training
 
 * `getPatchbyCoordsMIL.py`：Generate training dataset for HDMIL-Patch.
 
@@ -37,12 +27,6 @@
 * `test_features_random.py`：Extract and generate features using the trained HDMIL-Patch model.
 
 * `mil2_train.py`：Training the HDMIL-Group model.
-
-### Interpretability: Obtaining the Top_k patches
-
-* `mil1_train_attention_weight_sort.py`: Extracting top_k1 attention weights and their corresponding patches using the trained HDMIL-Patch model.
-
-* `mil2_train_attention_weight_sort.py`: Extracting top_k2 attention weights and their corresponding patches using the trained HDMIL-Group model.
 
 - - - 
 ### Environments
@@ -66,8 +50,4 @@
 * pytorch_lightning==1.9.3
 * openslide_python==1.1.2
 - - -
-If you have any questions, please contact Rui Yan at yanrui666666@gmail.com.
-
-If you find our work useful in your research, please consider citing our paper at:
-
-Yan R, Shen Y, Zhang X, et al. Histopathological bladder cancer gene mutation prediction with hierarchical deep multiple-instance learning[J]. Medical Image Analysis, 2023, 87: 102824
+If you have any questions, please contact Haijing Luan at luanhaijing@cnic.cn.
