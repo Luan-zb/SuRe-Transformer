@@ -1,0 +1,50 @@
+# logging options
+save_dir:  </path/to/logging/dir>
+project: <project_name>
+
+# task options
+data_config: config/data_config_2_quantile.yaml
+task: <binary/multiclass/multilabel> 
+cohorts: [TCGA]
+target: <target>
+num_classes: <int>
+clini_info: {}
+label_dict:
+  HRD: 1
+  HRP: 0
+  
+
+# model options
+model:  <Transformer/TransMIL/AttentionMIL/Transformer_gpt_random/Transformer_gpt_random_4_quantile...>
+model_config:
+  depth: 6
+  heads: 6
+  dim_head: 64
+  dim: 384
+  mlp_dim: 384
+  dropout: 0
+norm: <normalizatio_used>
+feats: <feature_extractor_used>
+input_dim: <feature_dim>
+
+# trianing options
+split_dir:  </path/to/split/dir>
+folds: 5
+num_epochs: 25
+criterion:  <BCEWithLogitsLoss/CrossEntropyLoss/...> 
+optimizer: <AdamW/Adam/...>
+lr_scheduler: MultiStepLR
+milestones: [5,10,15,20] 
+gamma: 0.5
+lr_scheduler_config: {}
+lr: <float>
+wd: <float>
+bs: 1
+val_check_interval: 1 
+stop_criterion: loss
+csv_path: dataset_csv/
+log_path: logs_tesorboard
+roc_path: figures
+
+
+
