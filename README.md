@@ -4,11 +4,7 @@
 - - -
 ### Dataset
 * Training and internal validation: The WSIs used in training and internal validation are from TCGA (https://portal.gdc.cancer.gov/), open access to all. 
-* External validation: we have collected a total of 81 (FGFR3 mutation: 10, FGFR3 wild type: 71) bladder cancer patients' data (WSI + mutation status of the FGFR3) from Fudan University Shanghai Cancer Center (FUSCC). Based on this dataset (16 mutation WSI, 103 wildtype WSI), we conduct external validation (train on TCGA, test on FUSCC).
-
-  The Google Disk download link of the FUSCC dataset (118GB) is: https://drive.google.com/drive/folders/14W1LQx7730gjpXwjDJhbP6YM8_gL50QV?usp=sharing
-
-  The Baidu Netdisk download link of the FUSCC dataset (118GB) is: https://pan.baidu.com/s/1qunRbsejQ1x8YDtS-eyTxQ?pwd=4y50
+* External validation: we have collected a total of 192 breast cancer patients' data (WSI + HRD status) from the Beijing ChosenMed Clinical Laboratory Co. Ltd. Based on this dataset, we conduct external validation (train on TCGA, test on ChosenMed).
 - - -
 ### cancer_area_segmentation: Identify cancer area for each WSI
 
