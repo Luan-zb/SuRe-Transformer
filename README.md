@@ -16,17 +16,13 @@
 * `featureClustering_dino_8K.py`：Clustering with the features extracted from DINO.
 * `genFeature_multi_8K.py`：According to the WSI patch clustering results, randomly select patches to build SuRe-Transformer training set.
 
-### SuRe-Transformer：HDMIL training
+### Sufficient and Representative Transformer: SuRe-Transformer training
 
-* `getPatchbyCoordsMIL.py`：Generate training dataset for HDMIL-Patch.
+* `splits_k_fold.py`：Make and split training set, validation set and test set for SuRe-Transformer model.
 
-* `make_data_list_mil.py`：Make and split training set, validation set and test set for HDMIL model.
+* `train_k_fold_random.py`：Training the SuRe-Transformer model.
 
-* `mil1_train.py`：Training the HDMIL-Patch model.
-
-* `test_features_random.py`：Extract and generate features using the trained HDMIL-Patch model.
-
-* `mil2_train.py`：Training the HDMIL-Group model.
+*  `test_k_fold_random.py`：Testing the SuRe-Transformer model.
 
 - - - 
 ### Environments
