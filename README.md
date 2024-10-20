@@ -14,6 +14,7 @@
 ### patch_clustering: Clustering patches in WSI 
 
 * `featureClustering_dino_8K.py`：Clustering with the features extracted from DINO.
+  
 * `genFeature_multi_8K.py`：According to the WSI patch clustering results, randomly select patches to build SuRe-Transformer training set.
 
 ### Sufficient and Representative Transformer: SuRe-Transformer training
@@ -26,24 +27,21 @@
 
 - - - 
 ### Environments
-* Python==3.8.3
+* Python==3.10.9
 * Ubuntu==18.04.5
-* torch==1.7.0
-* torchvision==0.8.1
-* timm==0.3.2
-* imageio==2.25.1
-* matplotlib==3.6.2
-* numpy==1.23.0
-* opencv-python==4.6.0.66
+* torch==2.0.0
+* torchvision==0.15.0
+* matplotlib==3.7.2
+* numpy==1.22.3
 * pandas==1.5.2
-* Pillow==9.4.0
-* scikit_image==0.17.2
-* scikit_learn==1.2.1
-* scipy==1.10.1
-* skimage==0.0
+* Pillow==9.3.0
+* scikit_learn==1.2.0
+* scipy==1.8.1
 * spams==2.6.5.4
-* tensorboardX==2.6
+* tensorboardX==2.6.2.2
 * pytorch_lightning==1.9.3
 * openslide_python==1.1.2
+* einops==0.6.0
+* dgl==1.1.2
 - - -
 If you have any questions, please contact Haijing Luan at luanhaijing@cnic.cn.
