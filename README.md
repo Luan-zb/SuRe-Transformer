@@ -43,5 +43,7 @@
 * openslide_python==1.1.2
 * einops==0.6.0
 * dgl==1.1.2
+* urllib3==1.26.14
+* torchmetrics==0.11.4
 - - -
 If you have any questions, please contact Haijing Luan at luanhaijing@cnic.cn.
