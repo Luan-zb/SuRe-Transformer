@@ -47,3 +47,7 @@
 * torchmetrics==0.11.4
 - - -
 If you have any questions, please contact Haijing Luan at luanhaijing@cnic.cn.
+
+If you find our work useful in your research, please consider citing our paper at:
+
+Luan H, Hu T, Hu J, et al. Breast cancer homologous recombination deficiency prediction from pathological images with a sufficient and representative Transformer[J]. npj Precision Oncology, 2025, 9(1): 1-14.
