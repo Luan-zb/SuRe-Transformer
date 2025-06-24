@@ -3,7 +3,7 @@
 ![Graphical abstract](graphical-abstract.png) 
 
 - - -
-![Graphical abstract](SuRe-Transformer.png) 
+
 ### Dataset
 * Training and internal validation: The WSIs used in training and internal validation are from TCGA (https://portal.gdc.cancer.gov/), open access to all. 
 * External validation: we have collected a total of 192 breast cancer patients' data (WSI + HRD status) from the Beijing ChosenMed Clinical Laboratory Co. Ltd. Based on this dataset, we conduct external validation (train on TCGA, test on ChosenMed).
@@ -26,6 +26,10 @@
 * `train_k_fold_random.py`：Training the SuRe-Transformer model.
 
 *  `test_k_fold_random.py`：Testing the SuRe-Transformer model.
+
+![Graphical abstract](SuRe-Transformer.png) 
+
+
 
 - - - 
 ### Environments
